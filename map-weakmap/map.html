@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let map = new Map();
+
+        function funcao() {};
+        let objeto = {};
+
+        map.set('string', 'Uma string');
+        map.set(funcao, 'Uma função');
+        map.set(objeto, 'Um objeto');
+
+        console.log('\n');
+        console.log(map.get('string'));
+        console.log(map.get(funcao));
+        console.log(map.get(objeto));
+
+        console.log('\n');
+        console.log('Tamanho do Map: ' + map.size);
+        console.log('\n');
+
+        console.log(map.has('string'));
+        console.log(map.has('object'));
+        console.log('\n');
+
+        map.delete('string');
+        console.log(map.has('string'));
+        console.log('\n');
+
+        map.clear();
+        console.log('Tamanho do Map: ' + map.size);
+        console.log('\n');
+
+        //usando iteraodres com for..of
+        let mapa = new Map();
+        mapa.set('um', 1);
+        mapa.set('dois', 2);
+        mapa.set('três', 3);
+
+        //metodo key=>chaves
+        for (let chave of mapa.keys()) {
+            console.log(chave);
+        }
+
+        console.log('\n');
+
+        //metodo value=> valores
+        for (let value of mapa.values()) {
+            console.log(value);
+        }
+
+        console.log('\n');
+        //metodo entries retorna par chave-valor
+        for (let entradas of mapa.entries()) {
+            console.log(entradas);
+        }
+    </script>
+
+</body>
+
+</html>

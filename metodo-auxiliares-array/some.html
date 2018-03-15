@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let pesoDasMalas = [12, 32, 21, 29];
+
+        // ES5
+        let pesoAcima1 = false;
+
+        for (let i = 0; i < pesoDasMalas.length; i++) {
+            if (pesoDasMalas[i] > 30) {
+                pesoAcima1 = true;
+            }
+        }
+        console.log(pesoAcima1);
+        console.log;
+
+        let pesoAcima2 = pesoDasMalas.some(function(pesoMala) {
+            return pesoMala > 30;
+        });
+
+        console.log(pesoAcima2);
+    </script>
+
+</body>
+
+</html>

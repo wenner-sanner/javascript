@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let alunos = [{
+            nome: 'joão',
+            idade: 15
+        }, {
+            nome: 'Pedro',
+            idade: 18
+        }, {
+            nome: 'Maria',
+            idade: 25
+        }];
+
+        //ES5
+
+        let maiores = [];
+
+        for (let i = 0; i < alunos.length; i++) {
+            if (alunos[i].idade >= 18) {
+                maiores.push(alunos[i]);
+            }
+        }
+        console.log(maiores);
+        console.log('\n');
+
+        //es6
+        let alunosMaiores = alunos.filter(function(aluno) {
+            return aluno.idade >= 18;
+        });
+        console.log(alunosMaiores);
+    </script>
+
+</body>
+
+</html>

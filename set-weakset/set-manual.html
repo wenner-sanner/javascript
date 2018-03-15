@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function Set() {
+            let array = [];
+
+            this.add = function(valor) {
+                    if (array.indexOf(valor) === -1) {
+                        array.push(valor);
+                    }
+                },
+
+                this.mostraValores = function() {
+                    console.log(array);
+                }
+        }
+
+        let set = new Set();
+        set.add(1);
+        set.add(2);
+        set.add(2);
+        set.add(4);
+        set.add(6);
+
+        set.mostraValores();
+    </script>
+
+</body>
+
+</html>

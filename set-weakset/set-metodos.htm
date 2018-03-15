@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let musicas = new Set();
+        musicas.add('musica 1');
+
+        if (musicas.has('musica 1')) {
+            console.log('Musica 1 já existe');
+        } else {
+            musicas.add('musica 1');
+        }
+
+        musicas.add('musica 6');
+        musicas.add('musica 2');
+        musicas.add('musica 4');
+
+        console.log('Total de músicas salvas: ' + musicas.size);
+
+        musicas.delete('musica 2');
+
+        console.log('Total de músicas salvas: ' + musicas.size);
+
+        for (let musica of musicas) {
+            console.log(musica);
+        }
+
+        musicas.clear();
+        console.log(musicas);
+    </script>
+
+</body>
+
+</html>

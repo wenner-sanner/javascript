@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let numeros = [1, 2, 3, 4, 5];
+
+        // ES5
+        let soma1 = 0;
+        for (let i = 0; i < numeros.length; i++) {
+            soma1 += numeros[i];
+        }
+        console.log(soma1);
+        console.log('\n');
+
+        // ES6
+
+        let soma2 = 0;
+        soma2 = numeros.reduce(function(soma2, numero) {
+            return soma2 + numero;
+        }, 0);
+        console.log(soma2);
+
+        //exemplo 2;
+        let alunos = [{
+            nome: 'joão',
+            idade: 12
+        }, {
+            nome: 'pedro',
+            idade: 15
+        }, {
+            nome: 'antonio',
+            idade: 30
+        }]
+
+        let nomes = alunos.reduce(function(arrayNomes, aluno) {
+            arrayNomes.push(aluno.nome);
+            return arrayNomes;
+        }, []);
+
+        console.log(nomes);
+    </script>
+
+</body>
+
+</html>

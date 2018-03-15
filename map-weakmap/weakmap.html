@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let weakmap = new WeakMap();
+        let elemento1 = window;
+        let elemento2 = document.querySelector('body');
+
+        weakmap.set(elemento1, 'Sou elemento 1');
+        weakmap.set(elemento2, 'Sou elemento 2');
+
+        //recuperando por meio das chaves
+        console.log(weakmap.get(elemento1));
+        console.log(weakmap.get(elemento2));
+
+        //removendo referencias
+        elemento2.parentNode.removeChild(elemento2);
+        elemento2 = null;
+
+        console.log(weakmap.get(elemento2));
+
+        //erro, weakmap so aceita objetos como chave
+        function funcao() {
+            return 20;
+        };
+        weakmap.set(funcao);
+        console.log(weakmap.get(funcao));
+
+        weakmap.set('string', 'isto é uma string');
+        // console.log(weakmap.get(string));
+    </script>
+
+</body>
+
+</html>

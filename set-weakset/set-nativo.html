@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let set = new Set();
+        set.add(1);
+        set.add(2);
+        set.add(2);
+        set.add(5);
+        set.add(4);
+
+        for (let iten of set) {
+            console.log(iten);
+        }
+
+        console.log('\n');
+        //usando array para inicalizar Set
+        let array = [1, 2, 2, 3, 5];
+        let setInicalizado = new Set(array);
+
+        for (let iten of setInicalizado) {
+            console.log(iten);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let bruxos = ['Harry Potter', 'Hermino Granger', 'Rony Weasley'];
+
+        //obtem iterador
+        let iteradorBruxos1 = bruxos[Symbol.iterator]();
+        console.log(iteradorBruxos1.next());
+        console.log(iteradorBruxos1.next());
+        console.log(iteradorBruxos1.next());
+        console.log(iteradorBruxos1.next()); //{value: undefine, done: true}
+
+        console.log('\n');
+
+        let iteradorBruxos2 = bruxos[Symbol.iterator]();
+
+        let proximo = iteradorBruxos2.value;
+        do {
+            console.log(proximo);
+            proximo = iteradorBruxos2.next();
+
+        } while (!proximo.done);
+    </script>
+
+</body>
+
+</html>
