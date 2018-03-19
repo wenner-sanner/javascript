@@ -3,3 +3,7 @@ function valorPadraoSemAtribuicaoExplicita(valor) {
 }
 
 valorPadraoSemAtribuicaoExplicita();
+
+console.log('\n');
+
+valorPadraoSemAtribuicaoExplicita('Wenner Sanner');
